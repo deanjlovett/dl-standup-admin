@@ -1,0 +1,28 @@
+{
+  "name": "student",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slack_id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "student-standup": {
+      "type": "hasMany",
+      "model": "standup",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
